@@ -9,7 +9,7 @@ import (
 
 func main() {
 	//データを待つ
-	lis, err := net.Listen("tcp", "10.0.2.117:8080")
+	lis, err := net.Listen("tcp", ":8080")
 	if err != nil {
 		panic(err)
 	}

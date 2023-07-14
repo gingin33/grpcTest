@@ -14,7 +14,7 @@ import (
 )
 
 func main() {
-	connect, _ := grpc.Dial("10.0.2.62:8080", grpc.WithInsecure())
+	connect, _ := grpc.Dial("100.65.214.74:8080", grpc.WithInsecure())
 
 	defer connect.Close()
 	uploadhalder := upload.NewUploadHandlerClient(connect)
