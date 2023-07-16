@@ -5,6 +5,6 @@ service UploadHandler {
   rpc Upload(stream UploadRequest) returns (UploadReply) {};
 }
 
-message UploadRequest { bytes VideoData = 1; }
+message UploadRequest { bytes ImageData = 1; }
 
 message UploadReply { string UploadStatus = 1; }

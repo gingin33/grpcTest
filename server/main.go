@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net"
 
 	"github.com/jon20/grpc-stream-sample/server/grpc"
@@ -8,11 +9,14 @@ import (
 )
 
 func main() {
+	port := "8080"
+
 	//データを待つ
-	lis, err := net.Listen("tcp", ":8080")
+	lis, err := net.Listen("tcp", ":"+port)
 	if err != nil {
 		panic(err)
 	}
+	fmt.Println("Listening at " + port + "...")
 
 	//gRPCサーバを立てる
 	server := grpc.NewServer()

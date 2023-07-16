@@ -45,6 +45,7 @@ func (s *server) Upload(stream upload.UploadHandler_UploadServer) error {
 	if err != nil {
 		return err
 	}
+	fmt.Println("received docker image")
 	loadDockerImage()
 
 	return nil
